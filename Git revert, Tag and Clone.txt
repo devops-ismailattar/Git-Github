@@ -1,0 +1,94 @@
+############################ Git Revert ################################
+
+create a file write you code or data in it
+
+$ vim file.yaml
+
+add file to the staging area
+
+$ git add <<file name>>
+
+commit the file 
+
+git commit -m "messeage" <<file name>>
+
+verify 
+
+$ git log --oneline
+
+now repopen file add few more code and commmit the file again 
+
+$ vim file.yaml
+
+$ git add <<>>
+
+$ git commit -m "messeage" <<file name>>
+
+$ git log --oneline
+
+now lets revert the work you have done was in previos commit 
+
+
+git revert <<commit id>>
+
+new commit id will be genrated with one step back data 
+
+$ git log --oneline
+
+$ git show <<commit id>>
+
+also check the file , incorrect data will removed 
+
+$ cat file <<name>>
+
+
+
+
+################################### Basic commands to clear files ############################
+
+
+create few blank files 
+
+touch file1 file2 file3
+
+to remove untracked file run below commands
+
+$ git clean -n
+
+$ git clean -f
+
+####################################### Tagging ###############################################
+
+
+check the commits
+
+$ git log --oneline
+
+
+to give taging to comiits
+
+$ git tag -a <<your Tag>> -m "message" 8a306ba
+
+verify now 
+
+$ git log --oneline 
+
+now you can view file name without comit id 
+
+$ git show <<tagname>>
+
+to delete tag 
+
+$ git tag -d <<tagname>>
+
+
+#################################################### GIt Clone ###########################################
+
+
+to clone repo from github 
+
+$ git clone <<repo url>>
+ 
+
+
+

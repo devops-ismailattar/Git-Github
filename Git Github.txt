@@ -1,0 +1,155 @@
+
+###################### GIT #####################
+
+Launch 2 ec2 instaces in two diffrent reagion 
+
+
+Install git perform below steps on ec2
+
+$ yum install git
+
+$ git --version
+
+Create a username 
+
+$  git config --global user.name "user1"
+
+set email 
+
+$ git config --global user.email "attarismail6@gamil"
+
+verify details are configured
+
+$ git config --list
+
+
+###########
+
+Create a directory now 
+
+$ mkdir workspace
+
+$ cd workspace
+
+$ git init
+
+$ vim 1st conde # add your code in the file and save 
+
+now do  git status it will show if you have anything to add
+
+$ git status
+
+now add the file 
+
+$ git add <<file-name>> 
+
+now you have to commit the your code , with  below command
+
+$ git commit -m "first commit from SG" <<file name>>
+
+now do git status you will see there will be nothing commit , it will show in output
+
+now you check commit history with below command 
+
+$ git log <<file name>>
+in the output you will see the commit id and details of auther
+
+then to check what changes in made in that commit id , you can run below command
+
+$ git show <<commit id>>
+
+now lets push the code to git hub 
+
+login to github , create repo 
+
+now lets connect your local repo to remote repo(git hub)
+
+$ git remote add origin https://github.com/devops-ismailattar/Test.git
+
+now lets push the code to github 
+
+$ git push -u origin master
+
+
+Now lets connect to another ec2 machinge
+
+connect your local repo to remote repo(git hub)
+
+pull the code from git hub 
+
+$ git pull  origin master
+
+$ ls 
+
+all data will be there 
+
+now you can check who did the chnages n all who commited code , 
+
+$ git log
+
+$ git show <<commit id>>
+
+
+now upload the files and and commit and push to github 
+
+$  git add .
+
+$ git status 
+
+$  git commit -m "changes verifed from singapore team" 
+
+check logs now 
+
+$ git log 
+
+push the code to git 
+
+$  git push  origin master
+
+check on git hub that code is pushed 
+
+############################# Git ingonre #############
+
+If you have multiple files in your local repo and you want to ignore dew of them ,
+
+$ vim .gitignore
+
+#add either file name or extension
+
+*.csv
+*.xml
+
+
+now add and commite the ignore file 
+
+$ git add .
+
+$ git commit -m "ignore files" 
+
+$ touch one.csv two.xml three four five.repo
+
+$ git status # this time you will not see any file with extention xml and csv
+
+
+
+#################Commands##########
+
+$ git log -1 # it will show last one commit only 
+
+$ git log --oneline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,191 @@
+###########################GIT BRANCH #####################
+
+to see the brnches and which branch you are in run below command 
+
+$ git branch 
+
+Create a new bracnch 
+
+$ git branch branch1
+
+now list the branch to verify 
+
+$ git branch 
+
+now switch to newly created branch 
+
+$ git checkout branch1
+
+everything from master branch will be copied like commit n all, verify as below
+
+$ git log --oneline
+
+$ ls
+
+now create some file with code
+
+vim branch1
+
+now add the file to stage and commit
+
+$ git add <<file name>>
+
+$ git status 
+
+$ git commit -m "commit from new branch" <<file name>>
+
+$ git log 
+
+now switch to master branch and see the file will not be reflecting there also commit will not reflect
+
+$ git checkout master
+
+$ ls 
+
+$ git log --oneline
+
+
+##################################### Merge #######################
+
+to merge any branch with master, first get into master branch , then below command
+
+$ git merge <name>>
+
+check all files and commit will be reflecting in master branch as well 
+
+$ ls 
+
+$ git log --oneline
+
+now push the data to github 
+
+$ git push -u origin master
+
+
+######################################### conflict #######################
+
+create same file in two diffrent branches  
+
+add those file im staging and commit 
+
+$ git add <<file name>>
+
+$ git commit -m "get node" file1
+
+now switch to master branch 
+
+$ git checkout master
+
+now merch the branches
+
+$ git merge <<branch name>>
+
+you will see conflict error, now open the file and adjust the line as you want (
+
+$ vim filename
+
+now stage and commit 
+
+$ git add <<file name>>
+
+$ git commit -m "get node" file1
+
+$ git push -u origin master
+
+
+############################################## Git Stashing ########################
+
+$ touch file1
+
+also stage and commit 
+
+$ git add <<file name>>
+
+$ git commit -m "get node" file1
+
+add contain in file 
+
+now lets stash the file 
+
+$ git stash
+
+to chech stash list 
+
+$ git stash list
+
+now open the same filie again start working on data
+
+now lets get the data back from stash in same file 
+
+$ git stash apply stash@{0}
+
+now you can add and commit
+
+
+################################################# GIT Reset ######################
+
+create code in file 
+
+$ vim file.yaml 
+
+
+add in stage
+
+then check file is added in stage 
+
+$ git status
+
+now you want this file to come out of stage , run below command 
+
+$ git reset <<file name>>
+
+$ git status # file will come out of stage
+
+now lets clear data from staging as well as from workspace 
+
+create a file
+
+$ vim file.yaml
+
+$ git add <<file>>
+
+$ git status
+
+run belo command to clean 
+
+$ git reset --hard
+
+veriy 
+
+$ git status
+
+$ ls 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
